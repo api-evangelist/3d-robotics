@@ -1,0 +1,59 @@
+{
+    "name": "3D Robotics",
+    "description": "<p>3DR is committed to helping people see their world from above. We&rsquo;re North America&rsquo;s largest personal drone company, known for pioneering advanced and easy-to-use consumer drone technology, and for the Pixhawk, the world&rsquo;s most popular autopilot platform. All 3DR drone systems also serve as robust tools for data analysis, enabling mapping, surveying, 3D modeling and more. Our technology is currently used across multiple industries around the world, including agriculture, construction, infrastructure, search and rescue and ecological study.<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/3dr-dronekit-logo.png",
+    "tags": [
+        "api provider",
+        "drones",
+        "have api",
+        "no api definition",
+        "target"
+    ],
+    "created": "2019-12-12",
+    "modified": "2019-12-12",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/3d-robotics\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "3D Robotics",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/3dr-dronekit-logo.png",
+            "humanURL": "http:\/\/dronekit.io",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/3d-robotics-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/3d-robotics-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Documentation",
+            "url": "http:\/\/api.3drobotics.com\/swagger-ui\/"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/dronekit"
+        },
+        {
+            "type": "Support",
+            "url": "http:\/\/dronekit.io\/support"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/3drobotics"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/dronekit.io"
+        }
+    ]
+}
