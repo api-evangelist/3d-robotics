@@ -1,0 +1,13 @@
+generated: '2026-09-05'
+method: searched
+source: https://docs.3dr.com/ (200), https://3dr.wiki/sitemap-0.xml (200), https://www.3dr.com/ (200)
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are published, and none could be observed, because 3DR operates
+  no public API. The entire 3dr.wiki / docs.3dr.com sitemap (61 pages, enumerated
+  2026-09-05) is hardware documentation — autopilots, GNSS, telemetry, ESCs,
+  power, guides, and industry regulations — with no API reference section. No
+  `RateLimits` pointer is wired into apis.yml, because this file records an
+  absence rather than a runtime signal an agent could use.

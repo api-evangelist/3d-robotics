@@ -1,0 +1,114 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  https://www.3dr.com/ (200), https://docs.3dr.com/ (200), https://3dr.wiki/sitemap-0.xml
+  (200), DNS + HTTP probes of the legacy 3D Robotics hosts, npm/PyPI registry metadata,
+  https://github.com/3drobotics (200) — all checked 2026-09-05
+summary: >-
+  3DR publishes no API, and therefore no API lifecycle policy. What this file
+  records instead is the one lifecycle fact that matters for a catalog reader:
+  the web API 3D Robotics did once publish is decommissioned, and the corporate
+  entity behind it is not the entity trading as 3DR today.
+api_versioning:
+  scheme: null
+  status: not-applicable
+  note: No public web API exists on any 3DR host; nothing to version.
+deprecation_policy:
+  published: false
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    No deprecation or Sunset/Deprecation (RFC 8594) policy is published. No
+    `Deprecation` pointer is wired in apis.yml, because there is no policy to
+    point at.
+status_page:
+  published: false
+  url: null
+  note: >-
+    No status page found on 3dr.com, docs.3dr.com, 3dr.wiki or store.3dr.com, and
+    no status subdomain resolves. No `StatusPage` pointer is wired.
+sla:
+  published: false
+  note: >-
+    The published commitments are hardware commercial terms — lead times, RMA /
+    returns, reseller and purchase-order process — not a service-level agreement.
+    See https://docs.3dr.com/orders-and-shipping/lead-times and
+    https://docs.3dr.com/orders-and-shipping/rma.
+hardware_lifecycle:
+  published: true
+  note: >-
+    The one lifecycle surface 3DR does publish is for HARDWARE: the knowledge base
+    carries an explicit "Discontinued" section under GNSS (Classic M8N IST8310,
+    MosaicX5), which is a genuine, dated end-of-life signal for products rather
+    than for an API.
+  evidence:
+  - url: https://3dr.wiki/gps/discontinued/mosaicx5/
+    status: 200
+  - url: https://3dr.wiki/gps/discontinued/classic-m8n-ist8310/
+    status: 200
+entity_discontinuity:
+  stated_by_provider: true
+  quote: >-
+    "Please note that 3DR Inc was a distinct entity before the year 2023. As a
+    result, any products that were sold prior to 2023 under the previous company
+    name are not covered by our present terms of responsibility or warranty. We
+    kindly request your understanding that our business is not providing any
+    support for sold products under the 3DR label prior to 2023."
+  evidence:
+  - url: https://www.3dr.com/
+    status: 200
+retired_surfaces:
+- name: DroneKit Cloud / DroneShare web API
+  operator: 3D Robotics, Inc. (pre-2023)
+  status: decommissioned
+  contract_format: Swagger (swagger-ui)
+  last_known_contract_url: http://api.3drobotics.com/swagger-ui/
+  evidence:
+  - fact: >-
+      The npm package `dronekit@1.0.1`, published 2015-06-02 by maintainer
+      tim@3drobotics.com, describes itself as "Tests the
+      http://www.droneshare.com/ APIs. See http://api.3drobotics.com/swagger-ui/".
+      This is first-party evidence that the API and its Swagger description
+      existed.
+    url: https://registry.npmjs.org/dronekit
+    status: 200
+  - fact: 'api.3drobotics.com no longer resolves — DNS answer status NXDOMAIN.'
+    url: https://api.3drobotics.com/
+    status: 0
+  - fact: 'www.droneshare.com no longer resolves.'
+    url: https://www.droneshare.com/
+    status: 0
+  - fact: >-
+      The Internet Archive holds a 2015-11-15 capture of the swagger-ui, which is
+      how the surface is confirmed to have been real. It is NOT saved into this
+      repo: an archived document is not a contract the provider serves today, and
+      saving it would credit 3DR with a published API it retired.
+    url: http://web.archive.org/web/20151115075013/http://api.3drobotics.com:80/swagger-ui/
+    status: 200
+- name: 3drobotics.com corporate domain
+  operator: 3D Robotics, Inc. (pre-2023)
+  status: transferred
+  note: >-
+    The original corporate domain now redirects off-brand: https://3drobotics.com/
+    301s to https://www.kittyhawk.aero/, a different company. Any pre-2023 3DR
+    link into 3drobotics.com is therefore not a 3DR surface any more.
+  evidence:
+  - url: https://3drobotics.com/
+    status: 200
+    resolved_to: https://www.kittyhawk.aero/
+- name: DroneKit SDKs (Python / Android / JS)
+  operator: 3D Robotics, Inc. (pre-2023)
+  status: unmaintained
+  note: >-
+    dronekit.io still serves the original DroneKit developer site (HTTP 200,
+    "Copyright © 2015"), and github.com/dronekit still hosts the source, but the
+    last PyPI release is 2.9.2 on 2019-03-18 and the 3D Robotics fork at
+    github.com/3drobotics/dronekit-python carries GitHub's "Public archive"
+    badge (last pushed 2017). See packages/3d-robotics-packages.yml.
+  evidence:
+  - url: https://dronekit.io/
+    status: 200
+  - url: https://pypi.org/pypi/dronekit/json
+    status: 200
+  - url: https://github.com/3drobotics
+    status: 200

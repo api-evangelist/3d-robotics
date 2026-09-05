@@ -64,5 +64,25 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-3DR is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/3d-robotics_stock/
+3DR, Inc. designs and manufactures electronic systems for unmanned vehicles, drones and UAVs from
+Chula Vista, California — Control N1 / Control Zero / Pixracer Pro autopilots, Location One and
+ZED-F9P RTK GNSS receivers, SiK and Dualband Wi-Fi telemetry radios, DroneCAN power modules and
+sensors, ESCs, and an ArduRemoteID-based Remote ID module — built around open-source and
+open-hardware flight control (PX4, ArduPilot, DroneCAN, MAVLink).
+
+**3DR publishes no public web API.** Every OpenAPI / Swagger / GraphQL / llms.txt / `.well-known`
+path was probed on `www.3dr.com`, `docs.3dr.com`, `3dr.wiki`, `store.3dr.com` and `dronekit.io` on
+2026-09-05; all returned 404. What this profile records instead is the real published surface: a
+61-page hardware knowledge base, self-declared NDAA / FCC / Prop 65 / RoHS compliance notices, and
+the DroneCAN and FAA Remote ID protocol conformance the documentation states.
+
+**Two companies have traded as 3DR.** The company at 3dr.com states on its own site that "3DR Inc
+was a distinct entity before the year 2023" and does not support products sold under the earlier
+label. The pre-2023 3D Robotics, Inc. built Solo, Site Scan and the DroneKit developer program; its
+web API at `api.3drobotics.com` is decommissioned (NXDOMAIN), its DroneKit SDKs were last released
+2019-03-18, and `3drobotics.com` now redirects to an unrelated company. See
+`lifecycle/3d-robotics-lifecycle.yml` and `packages/3d-robotics-packages.yml`.
+
+- https://www.3dr.com/
+- https://docs.3dr.com/
+- https://forgeglobal.com/3d-robotics_stock/ (secondary-market listing this profile was harvested from)

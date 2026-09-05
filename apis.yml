@@ -1,17 +1,32 @@
 aid: 3d-robotics
 name: 3DR
-description: '3DR is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: '3DR, Inc. is an American designer and manufacturer of electronic systems
+  for unmanned vehicles, drones and UAVs, based in Chula Vista, California, and focused
+  on open-source and open-hardware flight control: Control N1 / Control Zero / Pixracer
+  Pro autopilots, Location One and ZED-F9P RTK GNSS receivers, SiK and Dualband Wi-Fi
+  telemetry radios, DroneCAN power modules and sensors, ESCs, and an ArduRemoteID-based
+  Remote ID module. The company states on its own site that "3DR Inc was a distinct
+  entity before the year 2023" and does not support products sold under the earlier
+  3D Robotics label (Solo, Site Scan, DroneKit). Its published surface is a hardware
+  knowledge base and a storefront; it operates no public web API.'
 url: https://raw.githubusercontent.com/api-evangelist/3d-robotics/refs/heads/main/apis.yml
+image: https://framerusercontent.com/assets/AIVTA0StByUN8m9CoyeXOFCN3E.jpg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Drones
+- UAV
+- Robotics
+- Hardware
+- Autopilots
+- GNSS
+- Telemetry
+- Electronics Manufacturing
+- Open Source Hardware
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +35,57 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.3dr.com/
+- type: About
+  url: https://www.3dr.com/about
+- type: Documentation
+  url: https://docs.3dr.com/
+- type: Support
+  url: https://store.3dr.com/contact-us/
+- type: Community
+  url: https://discord.gg/E9XgqbpeGP
+- type: PrivacyPolicy
+  url: https://docs.3dr.com/irc/privacy-policy
+- type: X-Store
+  url: https://store.3dr.com/
+- type: X-SecondaryMarket
   url: https://forgeglobal.com/3d-robotics_stock/
+- type: Packages
+  url: packages/3d-robotics-packages.yml
+- type: Lifecycle
+  url: lifecycle/3d-robotics-lifecycle.yml
+- type: Conformance
+  url: conformance/3d-robotics-conformance.yml
+- type: Compliance
+  url: conformance/3d-robotics-conformance.yml
+- type: DomainSecurity
+  url: security/3d-robotics-domain-security.yml
+- type: LLMsTxt
+  url: llms/3d-robotics-llms.txt
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    3DR, Inc. is an electronics manufacturer — docs.3dr.com / 3dr.wiki is a
+    61-page hardware knowledge base (autopilots, GNSS, telemetry, DroneCAN
+    accessories) with no API reference, and the only machine endpoint on any 3DR
+    host is BigCommerce's own storefront GraphQL on the store tenant, which
+    answers 401 "GraphQL credentials were missing"; the web API the pre-2023 3D
+    Robotics ran at api.3drobotics.com is NXDOMAIN.
+  evidence:
+  - url: https://3dr.wiki/openapi.json
+    status: 404
+  - url: https://docs.3dr.com/llms.txt
+    status: 404
+  - url: https://www.3dr.com/.well-known/api-catalog
+    status: 404
+  - url: https://store.3dr.com/graphql
+    status: 401
+  - url: https://api.3drobotics.com/
+    status: 0
+  checked: '2026-09-05'

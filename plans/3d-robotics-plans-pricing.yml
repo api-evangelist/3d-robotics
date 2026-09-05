@@ -1,0 +1,30 @@
+generated: '2026-09-05'
+method: searched
+source: https://store.3dr.com/ (200), https://store.3dr.com/shop-all/ (200), https://www.3dr.com/ (200)
+plan_count: 0
+plans: []
+note: >-
+  3DR publishes no API plans, tiers, quotas or usage pricing, because it sells no
+  API. Its commercial surface is a BigCommerce hardware storefront at
+  store.3dr.com with per-unit product pricing (autopilots, GNSS receivers,
+  telemetry radios, power modules, ESCs), plus a purchase-order and reseller
+  path documented at https://docs.3dr.com/orders-and-shipping/how-to-place-an-order-using-po
+  and https://docs.3dr.com/orders-and-shipping/how-to-become-a-reseller. That is
+  product pricing, not API pricing, so no `Pricing` or `Plans` pointer is wired
+  into apis.yml — pointing the rating's API pricing check at a hardware catalog
+  would assert a commercial API surface the company does not operate.
+commercial_surface:
+  type: hardware-ecommerce
+  platform: BigCommerce
+  platform_evidence: >-
+    store.3dr.com serves cdn11.bigcommerce.com assets and BigCommerce bc-ray
+    headers; https://store.3dr.com/graphql returns HTTP 401
+    {"errors":[{"message":"GraphQL credentials were missing. No token was sent."}]}
+    — that is BigCommerce's own Storefront GraphQL API on a tenant domain, not an
+    API 3DR designed, documents or offers. It is deliberately NOT recorded as a
+    3DR contract.
+  ordering_paths:
+  - online checkout
+  - purchase order
+  - reseller / distributor
+  - tax-exempt order

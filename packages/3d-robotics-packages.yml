@@ -1,0 +1,104 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  registry.npmjs.org, pypi.org/pypi/<pkg>/json, repo1.maven.org, rubygems.org,
+  crates.io queried 2026-09-05
+attribution_note: >-
+  ENTITY CAVEAT — read before treating these as 3DR SDKs. Every package below was
+  published by the PRE-2023 3D Robotics, Inc. (registry metadata names
+  "3D Robotics" as author and tim@3drobotics.com as the maintainer address, which
+  is first-party). The company now trading as 3DR, Inc. at 3dr.com states on its
+  own FAQ that "3DR Inc was a distinct entity before the year 2023" and that it
+  provides no support for products sold under the earlier 3DR label
+  (https://www.3dr.com/, 200). No `SDKs` pointer is wired into apis.yml for this
+  file: these libraries are abandoned (last release 2019-03-18), they wrap a web
+  API whose host no longer resolves, and the current entity disclaims them.
+  Crediting today's 3DR with a maintained SDK program on this evidence would be a
+  misattribution. The artifact is kept because a dated, first-party abandonment
+  signal is exactly the decay evidence this pipeline exists to record.
+packages:
+- name: dronekit
+  registry: pypi
+  url: https://pypi.org/project/dronekit/
+  language: python
+  official: true
+  official_basis: 'PyPI metadata author: "3D Robotics"; author_email tim@3drobotics.com'
+  entity: 3D Robotics, Inc. (pre-2023)
+  version: 2.9.2
+  published: '2019-03-18'
+  release_count: 34
+  license: apache
+  repository: https://github.com/dronekit/dronekit-python
+  note: >-
+    DroneKit-Python — MAVLink vehicle API. Latest release 2.9.2 published
+    2019-03-18; no release in over seven years. Depends on pymavlink >= 2.2.20.
+- name: dronekit-sitl
+  registry: pypi
+  url: https://pypi.org/project/dronekit-sitl/
+  language: python
+  official: true
+  official_basis: >-
+    Companion simulator binary distributor for DroneKit-Python, published by the
+    same DroneKit maintainer (PyPI author "Tim Ryan", 3DR engineer) under the
+    github.com/dronekit organization.
+  entity: 3D Robotics, Inc. (pre-2023)
+  version: 3.3.0
+  published: '2019-03-18'
+  license: null
+  repository: https://github.com/dronekit/dronekit-sitl/
+  note: >-
+    Ships the ArduPilot SITL binaries used to test DroneKit apps without a
+    vehicle. Same 2019-03-18 release date as dronekit; both were archived
+    together.
+- name: dronekit
+  registry: npm
+  url: https://www.npmjs.com/package/dronekit
+  language: javascript
+  official: true
+  official_basis: 'npm maintainer tim@3drobotics.com (tcr3dr)'
+  entity: 3D Robotics, Inc. (pre-2023)
+  version: 1.0.1
+  published: '2015-06-02'
+  license: null
+  note: >-
+    Test client for the DroneShare / DroneKit Cloud web API. Its own npm
+    description reads "Tests the http://www.droneshare.com/ APIs. See
+    http://api.3drobotics.com/swagger-ui/" — the clearest surviving evidence that
+    3D Robotics once published a Swagger-described web API. Both hosts are now
+    dead (api.3drobotics.com resolves NXDOMAIN as of 2026-09-05); see
+    lifecycle/3d-robotics-lifecycle.yml.
+- name: dronekit-android
+  registry: maven
+  url: https://github.com/dronekit/dronekit-android
+  language: java
+  official: true
+  official_basis: 'Published under the DroneKit organization created by 3D Robotics'
+  entity: 3D Robotics, Inc. (pre-2023)
+  version: null
+  published: null
+  note: >-
+    CHECKED, NOTHING TO RECORD. DroneKit-Android (the "3DR Services" client) was
+    distributed through JCenter/Bintray under com.o3dr.android, which shut down in
+    2021. Maven Central has no such artifact — https://repo1.maven.org/maven2/com/o3dr/
+    returns 404 (probed 2026-09-05) — so there is no registry metadata endpoint
+    from which to read a version or a release date. Source remains on GitHub.
+registries_checked:
+- registry: pypi
+  result: 2 first-party packages found
+- registry: npm
+  result: 1 first-party package found (plus one unrelated third-party "dronekitjs")
+- registry: maven-central
+  result: 'no com.o3dr group — https://repo1.maven.org/maven2/com/o3dr/ 404'
+- registry: rubygems
+  result: 'no gem — https://rubygems.org/api/v1/gems/dronekit.json 404'
+- registry: crates.io
+  result: 'no crate — https://crates.io/api/v1/crates/dronekit 404'
+- registry: nuget
+  result: not applicable; no .NET surface published by either 3DR entity
+current_entity_packages:
+  count: 0
+  note: >-
+    3DR, Inc. (2023-) publishes no client libraries of any kind. Its documentation
+    (docs.3dr.com / 3dr.wiki) covers hardware bring-up, pinouts and firmware
+    upload against upstream open-source projects (PX4, ArduPilot, ArduRemoteID,
+    DroneCAN) that the company does not itself distribute as packages.

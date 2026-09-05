@@ -1,0 +1,120 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  https://docs.3dr.com/irc/ndaa (200), https://docs.3dr.com/irc/fcc-id-dev (200),
+  https://docs.3dr.com/irc/ca-prop-65 (200), https://docs.3dr.com/irc/leaded-vs-lead-free
+  (200), https://3dr.wiki/guides/dronecan/ (200), https://3dr.wiki/telemetry/remote-id/
+  (200) — fetched 2026-09-05
+scope_note: >-
+  READ THIS BEFORE USING THESE ENTRIES. 3DR publishes no machine-readable API
+  contract, so nothing here is derived from a spec and nothing here is an API
+  conformance claim. These are the standards and regulatory regimes the company
+  states in its own documentation for its HARDWARE, each with the page that says
+  it. The usual API entries (oauth2, oidc, rfc9457, json:api, pagination,
+  idempotency) are all not-applicable for a provider with no API — recorded as
+  such rather than omitted, so the absence is legible.
+conformance:
+- id: ndaa-section-848
+  name: National Defense Authorization Act (NDAA) supply-chain compliance
+  category: regulatory
+  conforms: true
+  evidence: https://docs.3dr.com/irc/ndaa
+  detail: >-
+    "3DR, Inc hereby confirms its commitment to compliance with the National
+    Defense Authorization Act (NDAA) regulations… 3DR, Inc does not engage in
+    transactions with entities identified as restricted under the NDAA, including
+    those listed on the U.S. Department of Commerce Entity List, the U.S.
+    Department of Defense List of Communist Chinese Military Companies." Page
+    states "Last updated: Feb 2, 2023". This is a self-declared compliance
+    notice, not a third-party audit or certification.
+- id: faa-remote-id-part-89
+  name: FAA Remote Identification (14 CFR Part 89)
+  category: regulatory
+  conforms: true
+  evidence: https://3dr.wiki/telemetry/remote-id/
+  detail: >-
+    3DR ships a dedicated Remote ID module documented against the ArduPilot
+    ArduRemoteID open-source implementation, with CAN / UART / USB / Wi-Fi
+    interfaces and pinouts published. The docs point at
+    https://ardupilot.org/plane/docs/common-remoteid.html and
+    https://github.com/ArduPilot/ArduRemoteID. Note the specification table on
+    that page still carries "TBD" for receiver sensitivity, transmit power and
+    data rates.
+- id: dronecan
+  name: DroneCAN (UAVCAN v0) peripheral bus
+  category: domain-standard
+  conforms: true
+  evidence: https://3dr.wiki/guides/dronecan/
+  detail: >-
+    DroneCAN is the wire protocol across 3DR's peripheral line — CAN GNSS
+    (Location One, ZED-F9P CAN), CAN power modules, CAN airspeed, CAN Node F303,
+    CAN PWM adapter and KitCAN. The guide documents node-ID assignment, dynamic
+    node allocation, bootloader update and node-status ("OPERATIONAL") handling.
+    This is the closest thing 3DR has to a machine interface, and it is a
+    hardware bus rather than a network API — there is no published schema file to
+    save.
+- id: mavlink
+  name: MAVLink micro air vehicle protocol
+  category: domain-standard
+  conforms: true
+  evidence: https://3dr.wiki/guides/dronecan/
+  detail: >-
+    The autopilots and SiK telemetry radios expose MAVLink; the DroneCAN guide
+    documents the MAVLINK and CAN serial ports the device enumerates. 3DR does
+    not publish a MAVLink dialect XML of its own — the dialects live upstream in
+    ArduPilot/PX4 — so no dialect definition is captured in this repo.
+- id: fcc-part-15
+  name: FCC equipment authorization / FCC ID
+  category: regulatory
+  conforms: true
+  evidence: https://docs.3dr.com/irc/fcc-id-dev
+  detail: >-
+    3DR publishes an FCC ID disclaimer page covering the radio modules it sells.
+- id: ca-prop-65
+  name: California Proposition 65
+  category: regulatory
+  conforms: true
+  evidence: https://docs.3dr.com/irc/ca-prop-65
+  detail: Published Proposition 65 warning for products sold into California.
+- id: rohs-lead-free
+  name: Leaded vs lead-free solder / RoHS process disclosure
+  category: manufacturing
+  conforms: true
+  evidence: https://docs.3dr.com/irc/leaded-vs-lead-free
+  detail: >-
+    3DR publishes which of its assemblies use leaded vs lead-free process, plus a
+    conformal- vs nano-coating disclosure — a real manufacturing-process
+    disclosure, relevant to defense and industrial buyers.
+- id: oauth2
+  name: OAuth 2.0
+  category: api-security
+  conforms: false
+  evidence: https://www.3dr.com/
+  detail: 'Not applicable — no API, no authorization surface. All /.well-known/oauth-authorization-server
+    and /.well-known/openid-configuration probes returned 404 (see well-known/3d-robotics-well-known.yml).'
+- id: rfc9457
+  name: RFC 9457 Problem Details for HTTP APIs
+  category: api-semantics
+  conforms: false
+  evidence: https://docs.3dr.com/
+  detail: Not applicable — no HTTP API and no published error catalog.
+- id: openapi
+  name: OpenAPI description published
+  category: api-contract
+  conforms: false
+  evidence: https://docs.3dr.com/
+  detail: >-
+    Not applicable. /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json,
+    /api-docs and /redoc were probed on www.3dr.com, docs.3dr.com, 3dr.wiki,
+    store.3dr.com and dronekit.io on 2026-09-05; every one returned 404 or an
+    HTML shell.
+compliance_programs:
+  published: true
+  kind: self-declared regulatory notices (NDAA, FCC, Prop 65, RoHS process)
+  certifications: []
+  certifications_note: >-
+    No SOC 2, ISO 27001, PCI, HIPAA or FedRAMP claim appears anywhere on the 3DR
+    surface, and there is no trust center. The `Compliance` pointer in apis.yml
+    points at this file on the strength of the published NDAA / FCC / Prop 65
+    notices only — supply-chain and product-safety compliance, not an
+    information-security certification.
