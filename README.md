@@ -64,25 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-3DR, Inc. designs and manufactures electronic systems for unmanned vehicles, drones and UAVs from
-Chula Vista, California — Control N1 / Control Zero / Pixracer Pro autopilots, Location One and
-ZED-F9P RTK GNSS receivers, SiK and Dualband Wi-Fi telemetry radios, DroneCAN power modules and
-sensors, ESCs, and an ArduRemoteID-based Remote ID module — built around open-source and
-open-hardware flight control (PX4, ArduPilot, DroneCAN, MAVLink).
+3DR, Inc. is an American designer and manufacturer of electronic systems for unmanned vehicles, drones and UAVs, based in Chula Vista, California, and focused on open-source and open-hardware flight control: Control N1 / Control Zero / Pixracer Pro autopilots, Location One and ZED-F9P RTK GNSS receivers, SiK and Dualband Wi-Fi telemetry radios, DroneCAN power modules and sensors, ESCs, and an ArduRemoteID-based Remote ID module. The company states on its own site that "3DR Inc was a distinct entity before the year 2023" and does not support products sold under the earlier 3D Robotics label (Solo, Site Scan, DroneKit). Its published surface is a hardware knowledge base and a storefront; it operates no public web API.
 
-**3DR publishes no public web API.** Every OpenAPI / Swagger / GraphQL / llms.txt / `.well-known`
-path was probed on `www.3dr.com`, `docs.3dr.com`, `3dr.wiki`, `store.3dr.com` and `dronekit.io` on
-2026-09-05; all returned 404. What this profile records instead is the real published surface: a
-61-page hardware knowledge base, self-declared NDAA / FCC / Prop 65 / RoHS compliance notices, and
-the DroneCAN and FAA Remote ID protocol conformance the documentation states.
+**Areas:** Company · Drones · UAV · Robotics · Hardware · Autopilots · GNSS · Telemetry · Electronics Manufacturing · Open Source Hardware
 
-**Two companies have traded as 3DR.** The company at 3dr.com states on its own site that "3DR Inc
-was a distinct entity before the year 2023" and does not support products sold under the earlier
-label. The pre-2023 3D Robotics, Inc. built Solo, Site Scan and the DroneKit developer program; its
-web API at `api.3drobotics.com` is decommissioned (NXDOMAIN), its DroneKit SDKs were last released
-2019-03-18, and `3drobotics.com` now redirects to an unrelated company. See
-`lifecycle/3d-robotics-lifecycle.yml` and `packages/3d-robotics-packages.yml`.
+## 3DR on APIs.io
 
-- https://www.3dr.com/
-- https://docs.3dr.com/
-- https://forgeglobal.com/3d-robotics_stock/ (secondary-market listing this profile was harvested from)
+Everything profiled for 3DR is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/3d-robotics/](https://apis.io/providers/3d-robotics/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [3D Robotics Domain Security](https://apis.io/security/3d-robotics/3d-robotics-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [3D Robotics Plans Pricing](https://apis.io/plans/3d-robotics/3d-robotics-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [3D Robotics Rate Limits](https://apis.io/rate-limits/3d-robotics/3d-robotics-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.3dr.com/)
+- [Documentation](https://docs.3dr.com/)
+- [Support](https://store.3dr.com/contact-us/)
+- [Privacy policy](https://docs.3dr.com/irc/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 14.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 18.4 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/3d-robotics/](https://apis.io/providers/3d-robotics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for 3DR: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/3d-robotics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
