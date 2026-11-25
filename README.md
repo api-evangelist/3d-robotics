@@ -80,19 +80,19 @@ Each property below is a page on APIs.io carrying the machine-readable artifact 
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [3D Robotics Domain Security](https://apis.io/security/3d-robotics/3d-robotics-domain-security/)
+- [3DR Domain Security](https://apis.io/security/3d-robotics/3d-robotics-domain-security/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [3D Robotics Plans Pricing](https://apis.io/plans/3d-robotics/3d-robotics-plans-pricing/)
+- [3DR Plans Pricing](https://apis.io/plans/3d-robotics/3d-robotics-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [3D Robotics Rate Limits](https://apis.io/rate-limits/3d-robotics/3d-robotics-rate-limits/)
+- [3DR Rate Limits](https://apis.io/rate-limits/3d-robotics/3d-robotics-rate-limits/)
 
 ## Where to find this API
 
@@ -105,7 +105,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 14.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 13.5** — emerging · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
@@ -114,7 +114,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Contract governance | 18.2 |
 | Operational transparency | 0.0 |
 | Developer ergonomics | 14.3 |
-| Access clarity | 18.4 |
+| Access clarity | 19.1 |
 
 **Agent readiness 2.5** — human-only
 
@@ -139,8 +139,14 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/3d-robotics/](https://apis.io/providers/3d-robotics/).
 
